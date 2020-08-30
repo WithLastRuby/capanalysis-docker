@@ -25,6 +25,12 @@ post_max_size = 64M
 max_execution_time = 600
 ```
 
+# Set mirror address
+- docker/Dockerfile
+```
+RUN sed -i 's/archive.ubuntu.com/원하는 repo URL/g' /etc/apt/sources.list
+```
+
 
 # file location capanalysis, postgresql (linux)
 ```
