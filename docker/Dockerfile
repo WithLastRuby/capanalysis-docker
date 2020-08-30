@@ -12,7 +12,6 @@ RUN echo '#!/bin/sh' > /usr/sbin/policy-rc.d \
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y tshark
 RUN gdebi --n /app/capanalysis_1.2.3_amd64.deb
 RUN sed -i -e 's/PRIORITY=1 #(0..20)/PRIORITY=0 #(0..20)Z/g' /etc/init.d/capanalysis
-ADD launcher.sh /app/
 RUN apt install sudo
 ADD upload.ini /etc/php/7.3/apache2/conf.d
 
